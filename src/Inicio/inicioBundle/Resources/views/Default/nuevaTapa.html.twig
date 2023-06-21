@@ -1,0 +1,118 @@
+{# Plantilla de nuestra apliacion #}
+{% extends 'base.html.twig' %}
+{# Titulo #}
+{% block titulo %}Nueva tapa
+{% endblock %}
+{# CONTENIDO #}
+{% block contenido %}
+	<header>
+	{# boostrap #}
+	
+		{# <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+											<ol class="carousel-indicators">
+												<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+												<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+												<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+											</ol>
+											<div
+												class="carousel-inner" role="listbox">
+												<!-- Slide One - Set the background image for this slide in the line below -->
+												<div class="carousel-item active" style="background-image: url({{asset('imagen/slide01.png')}})">
+													<div class="carousel-caption d-none d-md-block">
+														<h3>Bar juan</h3>
+														<p>Lugar para convivir en parejas y amigos</p>
+													</div>
+												</div>
+												<!-- Slide Two - Set the background image for this slide in the line below -->
+												<div class="carousel-item" style="background-image: url({{asset('imagen/slide02.png')}})">
+													<div class="carousel-caption d-none d-md-block">
+														<h3>Bar juan</h3>
+														<p>Carta ronvada todos los meses</p>
+													</div>
+												</div>
+												<!-- Slide Three - Set the background image for this slide in the line below -->
+												<div class="carousel-item" style="background-image: url({{asset('imagen/slide03.png')}})">
+													<div class="carousel-caption d-none d-md-block">
+														<h3>Bar juan</h3>
+														<p>Comida tradicional y de autor</p>
+													</div>
+												</div>
+											</div>
+											<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+												<span class="sr-only">Previous</span>
+											</a>
+											<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+												<span class="carousel-control-next-icon" aria-hidden="true"></span>
+												<span class="sr-only">Next</span>
+											</a>
+										</div> #}
+
+		{# materialize #}
+		<div class="carousel carousel-slider center" data-indicators="true">
+
+			<div class="carousel-item  white-text" style="background-image: url({{asset('imagen/slide01.png')}})">
+				<h2>First Panel</h2>
+				<p class="white-text">This is your first panel</p>
+				<div class="carousel-fixed-item right">
+					<a class="btn waves-effect white grey-text darken-text-2 left">button</a>
+				</div>
+			</div>
+			<div class="carousel-item amber white-text" style="background-image: url({{asset('imagen/slide02.png')}})">
+				<h2>Second Panel</h2>
+				<p class="white-text">This is your second panel</p>
+			</div>
+			<div class="carousel-item green white-text" style="background-image: url({{asset('imagen/slide03.png')}})">
+				<h2>Third Panel</h2>
+				<p class="white-text">This is your third panel</p>
+			</div>
+		</div>
+	</header>
+	<!-- Page Content -->
+	<div class="container-fluid">
+		<h1 class="my-4">Nuestras mejores tapas</h1>
+
+		<div class="row">
+			{% for datosDentroDelContenido in resultTapas %}
+				{# {% if datosDentroDelContenido['top'] == "t" %} #}
+				<div class="col-lg-4 col-sm-6 portfolio-item">
+					<div class="card h-100">
+						<a href="{{path('tapas_tapas_homepage',{'id':datosDentroDelContenido['idtapa']})}}"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+						<div class="card-body">
+							<h4 class="card-title">
+								<a href="{{path('tapas_tapas_homepage',{'id':datosDentroDelContenido['idtapa']})}}">{{datosDentroDelContenido['nombre']}}</a>
+							</h4>
+							<p class="card-text">{{datosDentroDelContenido['descripcion_espanol']}}</p>
+						</div>
+						<div class="card-body">
+							<a href="#" class="card-link">Card link</a>
+							<a href="#" class="card-link">Another link</a>
+						</div>
+					</div>
+				</div>
+				{# {% endif %} #}
+			{% endfor %}
+		</div>
+		<!-- /.row -->
+		<div class="containerB">
+			<input type="checkbox" id="btn-mas">
+			<div
+				class="redes">
+				{# <a href="#" class="fa fa-facebook" data-toggle="tooltip" title="Facebook" delay: { "show": 500, "hide": 100 }> </a> #}
+				<a id="btnModal" class="fa fa-plus btn" data-toggle="tooltip" title="Nueva Tapa" delay: { "show" : 500, "hide" : 100 }></a>
+				<a href="#" class="fa fa-youtube"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-pinterest"></a>
+				{# <a href="#" class="fa fa-youtube"></a>
+								<a href="#" class="fa fa-twitter"></a>
+								<a href="#" class="fa fa-pinterest"></a> #}
+			</div>
+			<div class="btn-mas">
+				<label for="btn-mas" class="fa fa-plus"></label>
+			</div>
+		</div>
+		<!-- /.containerB-->
+	</div>
+	{% include 'InicioinicioBundle:Default:modal.html.twig' %}
+	<!-- /.container-->
+{% endblock %}

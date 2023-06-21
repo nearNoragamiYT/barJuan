@@ -1,0 +1,3 @@
+tapas_tapas_homepage:
+    path:     /Tapas/{id}
+    defaults: { _controller: TapasTapasBundle:Tapas:Tapas, id: null }

@@ -1,0 +1,3 @@
+nosotros_i_inosotros_homepage:
+    path:     /NosotrosNuevo
+    defaults: { _controller: NosotrosIInosotrosBundle:Nosotros:nosotros2 }

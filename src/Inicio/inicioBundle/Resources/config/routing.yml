@@ -1,0 +1,7 @@
+inicioinicio_homepage:
+    path:     /
+    defaults: { _controller: InicioinicioBundle:Inicio:Inicio }
+
+inicioinicio_Gestion_tapas:
+    path:     gestion/nuevaTapa
+    defaults: { _controller: InicioinicioBundle:GestionTapas:nuevaTapa }

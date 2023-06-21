@@ -1,0 +1,109 @@
+{# Plantilla de nuestra apliacion #}
+{% extends 'base.html.twig' %}
+{# Titulo #}
+{% block titulo %}Bares{% endblock %}
+{# CONTENIDO #}
+{% block contenido %}
+
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Bar Juan
+        <small>Bares</small>
+      </h1>
+        <!-- BAR Celaya -->
+  {% if sitio=='Celaya' or sitio=='todos'%}
+  <!-- BAR Celaya -->
+  <div class="row">
+    <!-- Map Column -->
+    <div class="col-lg-8 mb-4">
+      <!-- Embedded Google Map -->
+      <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.0460652610864!2d-100.81213799936798!3d20.528348028258698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cba9ad022c393%3A0x49792f7e6680ad15!2sMarquesa!5e0!3m2!1sen!2smx!4v1686343816938!5m2!1sen!2smx"></iframe>
+    </div>
+    <!-- Contact Details Column -->
+    <div class="col-lg-4 mb-4">
+      <h3>Detalles</h3>
+      <p>
+        Bar de Celaya
+        <br>Marquesa
+        <br>
+      </p>
+      <p>
+        <abbr title="Phone">P</abbr>: (123) 456-7890
+      </p>
+      <p>
+        <abbr title="Email">E</abbr>:
+        <a href="mailto:name@example.com">name@example.com
+        </a>
+      </p>
+      <p>
+        <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+      </p>
+    </div>
+  </div>
+  <!-- BAR Comonfort -->
+  {% endif %}
+  {% if sitio=='Comonfort' or sitio=='todos'%}
+  <!-- BAR Comonfort -->
+  <div class="row">
+    <!-- Map Column -->
+    <div class="col-lg-8 mb-4">
+      <!-- Embedded Google Map -->
+      <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7463.727941099826!2d-100.76476892186237!3d20.715747715637715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842ca853baeb10e3%3A0xd633b17e9de619e7!2sBar%20El%20Rinc%C3%B3n%20Brujo!5e0!3m2!1sen!2smx!4v1686343631712!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- Contact Details Column -->
+    <div class="col-lg-4 mb-4">
+      <h3>Detalles</h3>
+      <p>
+        Bar de Comonfort
+        <br>Bar El Rincón Brujo
+        <br>
+      </p>
+      <p>
+        <abbr title="Phone">P</abbr>: (123) 456-7890
+      </p>
+      <p>
+        <abbr title="Email">E</abbr>:
+        <a href="mailto:name@example.com">name@example.com
+        </a>
+      </p>
+      <p>
+        <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+      </p>
+    </div>
+  </div>
+  <!-- BAR Empalme_Escobedo -->
+  {% endif %}
+  {% if sitio=='Empalme_Escobedo' or sitio=='todos'%}
+  <!-- BAR Empalme_Escobedo -->
+  <div class="row">
+    <!-- Map Column -->
+    <div class="col-lg-8 mb-4">
+      <!-- Embedded Google Map -->
+      <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1866.476826317802!2d-100.750952461765!3d20.671464504753597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDQwJzE3LjMiTiAxMDDCsDQ0JzU4LjgiVw!5e0!3m2!1sen!2smx!4v1686340446961!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- Contact Details Column -->
+    <div class="col-lg-4 mb-4">
+      <h3>Detalles</h3>
+      <p>
+        Bar de Empalme Escobedo
+        <br>Bar la kika
+        <br>
+      </p>
+      <p>
+        <abbr title="Phone">P</abbr>: (123) 456-7890
+      </p>
+      <p>
+        <abbr title="Email">E</abbr>:
+        <a href="mailto:name@example.com">name@example.com
+        </a>
+      </p>
+      <p>
+        <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM
+      </p>
+    </div>
+  </div>
+  <!-- BAR MADRID -->
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,4 @@
+contactar_contactar_homepage:
+    path:     /Contactar/{sitio}
+    defaults: { _controller: ContactarContactarBundle:Contactar:contactar, sitio: todos}
+

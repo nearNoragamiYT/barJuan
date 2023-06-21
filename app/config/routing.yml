@@ -1,0 +1,23 @@
+inicioinicio:
+    resource: "@InicioinicioBundle/Resources/config/routing.yml"
+    prefix:   /
+
+tapas_tapas:
+    resource: "@TapasTapasBundle/Resources/config/routing.yml"
+    prefix:   /
+
+contactar_contactar:
+    resource: "@ContactarContactarBundle/Resources/config/routing.yml"
+    prefix:   /
+
+nosotros_i_inosotros:
+    resource: "@NosotrosIInosotrosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+nosotros_nosotros:
+    resource: "@NosotrosNosotrosBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

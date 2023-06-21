@@ -1,0 +1,3 @@
+nosotros_nosotros_homepage:
+    path:     /nosotros
+    defaults: { _controller: NosotrosNosotrosBundle:Default:index }
