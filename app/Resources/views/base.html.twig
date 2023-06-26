@@ -74,15 +74,16 @@
 		</footer>
 		{% block javascripts %}
 			<!-- boostrap core javaScript -->
-			<script src="{{asset('vendor/jquery/jquery.min.js') }}"></script>
-			<script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+			<script src="{{ asset('js/jquery-3.0.0.min.js') }}"></script>
+			<script src="{{ asset('js/jquery.validate.min.js') }}"></script>
+
+
+			<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 			<script src="{{ asset('resources/Inicio/inicioBundle/js/js.js')}}"></script>
 
 			<!-- Compiled and minified JavaScript -->
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 			<script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-
-
 		{% endblock %}
 	</body>
 </html>
