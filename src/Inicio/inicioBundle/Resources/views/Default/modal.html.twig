@@ -1,23 +1,47 @@
-<!-- Modal -->
-<dialog id="Tapa" class="size-modal-nueva-tapa">
-    <div class="modal-content">
-        <h4>Nueva tapa</h4>
-       <form id="frm-enviarFactura">
-            <input id="idCompra" name="idCompra" type="hidden" value ="">
-            <div class="row">
-                <div class="input-field col s12 m6">
-          		    <input  id="Email" type="text" name="Email"  value= "" readonly>
-          		    <label for="Email">Email</label>
-        	    </div>
-                <div class="input-field col s12 m6">
-          		    <input  id="CC" type="text" name="cc">
-          		    <label for="CC">CC</label>
-        	    </div>
-            </div>
-        </form>
-    </div>
-    <div class="modal-footer" style="margin-bottom:10px;">
-        <a class="waves-effect waves-light btn right btn-enviar-correo">Enviar</a>	
-        <a class="waves-effect waves-light btn red left close-modal-Tapa">Cerrar</a>
-    </div>
-</dialog>
+
+<!-- Modal Structure -->
+	<div id="Tapa" class="modal modal-fixed-footer"> <div class="modal-title">
+		<h4>Tapa Nueva</h4>
+	</div>
+	<div class="modal-content">
+		<form id="formularioTapa">
+			<div class="row">
+				<div class="input-field col s12 m6">
+					<input id="idtapa" type="text" name="idtapa" value="" readonly>
+					<label for="idtapa">idtapa</label>
+				</div>
+				<div class="input-field col s12 m6">
+					<input id="nombre validate" type="text" name="nombre" value="" required>
+					<label for="nombre">Nombre</label>
+				</div>
+				<div class="input-field col s12 m6">
+					<input id="descripcion_espanol" type="text" name="descripcion_espanol" value="" required>
+					<label for="descripcion_espanol">Descripcion</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 m6">
+					<input id="ingredientes" type="text" name="ingredientes" value="" required>
+					<label for="ingredientes">Ingredientes</label>
+				</div>
+				<div class="input-field col s12 m6">
+					<input id="foto" type="text" name="foto" value="">
+					<label for="foto">Foto</label>
+				</div>
+				<div class="input-field col s12">
+					<select id="top" name="top" required>
+						<option value="" disabled selected>Seleciona tu opcion</option>
+						<option value="True">Tapa top</option>
+						<option value="False">Tapa normal</option>
+					</select>
+					<label>tapas</label>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer" style="margin-bottom:10px;">
+		{# <input type="submit" class="btn btn-primary btn-enviar-correo" value="Submit"/> #}
+		<a class="waves-effect waves-light btn right btn-enviar-correo">Guardar</a>
+		<a class="waves-effect waves-light btn red left close-modal-Tapa">Cerrar</a>
+	</div>
+</div>

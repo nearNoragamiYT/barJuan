@@ -48,6 +48,29 @@
     font-size: 25px;
 }
 
+.size-modal-visualizar-factura{
+    width: 100%;
+    border:none;
+}
+
+.size-modal-nueva-tapa{
+    width: 50%;
+    height:30%;
+    margin-top: 70px;
+    border:none;
+}
+.modal-footer{
+    margin-top: 70px;
+}
+
+
+@media (max-width: 1536px) {
+    .size-modal-nueva-tapa{
+        width: 50%;
+        height:40%;
+       
+    }
+}
 
 
 
